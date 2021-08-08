@@ -6,7 +6,7 @@
 		"dockerfile": "Dockerfile"
 	},
 	"overrideCommand": false,
-	
+
 	// Forward Jupyter port locally, mark required
 	"forwardPorts": [8888],
 	"portsAttributes": {
@@ -24,7 +24,10 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-python.python"
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"donjayamanne.githistory",
+		"eamodio.gitlens"
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
