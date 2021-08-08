@@ -2,6 +2,14 @@
 
 FROM jupyter/datascience-notebook:ubuntu-20.04
 
+ARG HTTP_PROXY
+ENV HTTP_PROXY $HTTP_PROXY
+ENV http_proxy $HTTP_PROXY
+ENV HTTPS_PROXY $HTTP_PROXY
+ENV https_proxy $HTTP_PROXY
+ENV FTP_PROXY $HTTP_PROXY
+ENV ftp_proxy $HTTP_PROXY
+
 # We want to run common-debian.sh from here:
 # https://github.com/microsoft/vscode-dev-containers/tree/main/script-library#development-container-scripts
 # But that script assumes that the main non-root user (in this case jovyan)
